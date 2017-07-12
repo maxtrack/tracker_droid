@@ -65,7 +65,28 @@ embedder.parentNode.appendChild(s);
 })();
 </script>
  </td>
-
+  
+ <td>
+    <script type="text/javascript">
+baseUrl = "https://widgets.cryptocompare.com/";
+var scripts = document.getElementsByTagName("script");
+var embedder = scripts[ scripts.length - 1 ];
+var cccTheme = {"General":{"background":"#918F8E"}};
+(function (){
+var appName = encodeURIComponent(window.location.hostname);
+if(appName==""){appName="local";}
+var s = document.createElement("script");
+s.type = "text/javascript";
+s.async = true;
+var theUrl = baseUrl+'serve/v3/coin/chart?fsym=ETH&tsyms=USD,EUR,CNY,GBP';
+s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+embedder.parentNode.appendChild(s);
+})();
+</script>
+  </td>
+ </tr>
+ 
+  <tr>
  <td>
 <script type="text/javascript">
 baseUrl = "https://widgets.cryptocompare.com/";
@@ -84,28 +105,7 @@ embedder.parentNode.appendChild(s);
 })();
 </script>
  </td>
-</tr>
 
- <tr>
-  <td>
-    <script type="text/javascript">
-baseUrl = "https://widgets.cryptocompare.com/";
-var scripts = document.getElementsByTagName("script");
-var embedder = scripts[ scripts.length - 1 ];
-var cccTheme = {"General":{"background":"#918F8E"}};
-(function (){
-var appName = encodeURIComponent(window.location.hostname);
-if(appName==""){appName="local";}
-var s = document.createElement("script");
-s.type = "text/javascript";
-s.async = true;
-var theUrl = baseUrl+'serve/v3/coin/chart?fsym=ETH&tsyms=USD,EUR,CNY,GBP';
-s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
-embedder.parentNode.appendChild(s);
-})();
-</script>
-  </td>
-  
    <td>
     <script type="text/javascript">
 baseUrl = "https://widgets.cryptocompare.com/";
